@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FIFO_Toplvl
-Fri Jun 05 21:40:44 2026
+Sun Jun 28 15:56:03 2026
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,13 +13,11 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. Removed Registers Triggering Further Register Optimizations
- 10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Post-Synthesis Netlist Statistics for Top Partition
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -46,16 +44,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Jun 05 21:40:44 2026       ;
+; Analysis & Synthesis Status        ; Successful - Sun Jun 28 15:56:03 2026       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; FIFO_Toplvl                                 ;
-; Top-level Entity Name              ; FIR_4Tap                                    ;
+; Top-level Entity Name              ; PowerManager                                ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 75                                          ;
-;     Total combinational functions  ; 75                                          ;
-;     Dedicated logic registers      ; 45                                          ;
-; Total registers                    ; 45                                          ;
-; Total pins                         ; 28                                          ;
+; Total logic elements               ; 6                                           ;
+;     Total combinational functions  ; 6                                           ;
+;     Dedicated logic registers      ; 5                                           ;
+; Total registers                    ; 5                                           ;
+; Total pins                         ; 11                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -69,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                            ; FIR_4Tap           ; FIFO_Toplvl        ;
+; Top-level entity name                                            ; PowerManager       ; FIFO_Toplvl        ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -166,110 +164,56 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                         ;
-+----------------------------------+-----------------+------------------------+----------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path           ; Library ;
-+----------------------------------+-----------------+------------------------+----------------------------------------+---------+
-; FIR_4Tap.v                       ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/20.1/VLSI/FIR_4Tap.v ;         ;
-+----------------------------------+-----------------+------------------------+----------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                      ;
++-------------------------------------------------------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------------------------+----------------------+
+; File Name with User-Entered Path                                              ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                              ; Library              ;
++-------------------------------------------------------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------------------------+----------------------+
+; clk_gater_ALTCLKCTRL/synthesis/submodules/clk_gater_ALTCLKCTRL_altclkctrl_0.v ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/20.1/VLSI/clk_gater_ALTCLKCTRL/synthesis/submodules/clk_gater_ALTCLKCTRL_altclkctrl_0.v ; clk_gater_ALTCLKCTRL ;
+; PowerManager.v                                                                ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/20.1/VLSI/PowerManager.v                                                                ;                      ;
++-------------------------------------------------------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------------------------+----------------------+
 
 
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+---------------------------------------------+-------------+
-; Resource                                    ; Usage       ;
-+---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 75          ;
-;                                             ;             ;
-; Total combinational functions               ; 75          ;
-; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 0           ;
-;     -- 3 input functions                    ; 32          ;
-;     -- <=2 input functions                  ; 43          ;
-;                                             ;             ;
-; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 40          ;
-;     -- arithmetic mode                      ; 35          ;
-;                                             ;             ;
-; Total registers                             ; 45          ;
-;     -- Dedicated logic registers            ; 45          ;
-;     -- I/O registers                        ; 0           ;
-;                                             ;             ;
-; I/O pins                                    ; 28          ;
-;                                             ;             ;
-; Embedded Multiplier 9-bit elements          ; 0           ;
-;                                             ;             ;
-; Maximum fan-out node                        ; rst_n~input ;
-; Maximum fan-out                             ; 46          ;
-; Total fan-out                               ; 359         ;
-; Average fan-out                             ; 2.04        ;
-+---------------------------------------------+-------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 6         ;
+;                                             ;           ;
+; Total combinational functions               ; 6         ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 3         ;
+;     -- 3 input functions                    ; 2         ;
+;     -- <=2 input functions                  ; 1         ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 6         ;
+;     -- arithmetic mode                      ; 0         ;
+;                                             ;           ;
+; Total registers                             ; 5         ;
+;     -- Dedicated logic registers            ; 5         ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 11        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 5         ;
+; Total fan-out                               ; 42        ;
+; Average fan-out                             ; 1.27      ;
++---------------------------------------------+-----------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |FIR_4Tap                  ; 75 (75)             ; 45 (45)                   ; 0           ; 0            ; 0       ; 0         ; 28   ; 0            ; |FIR_4Tap           ; FIR_4Tap    ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                       ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name  ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+--------------+
+; |PowerManager              ; 6 (6)               ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 11   ; 0            ; |PowerManager       ; PowerManager ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+----------------------------------------+----------------------------------------+
-; Register name                          ; Reason for Removal                     ;
-+----------------------------------------+----------------------------------------+
-; X[3][14]                               ; Lost fanout                            ;
-; X[3][15]                               ; Lost fanout                            ;
-; X[2][11]                               ; Merged with X[2][10]                   ;
-; X[2][12]                               ; Merged with X[2][10]                   ;
-; X[2][13]                               ; Merged with X[2][10]                   ;
-; X[2][14]                               ; Merged with X[2][10]                   ;
-; X[2][15]                               ; Merged with X[2][10]                   ;
-; X[2][8]                                ; Merged with X[2][10]                   ;
-; X[2][9]                                ; Merged with X[2][10]                   ;
-; X[0][11]                               ; Merged with X[0][10]                   ;
-; X[0][12]                               ; Merged with X[0][10]                   ;
-; X[0][13]                               ; Merged with X[0][10]                   ;
-; X[0][14]                               ; Merged with X[0][10]                   ;
-; X[0][15]                               ; Merged with X[0][10]                   ;
-; X[0][8]                                ; Merged with X[0][10]                   ;
-; X[0][9]                                ; Merged with X[0][10]                   ;
-; X[1][11]                               ; Merged with X[1][10]                   ;
-; X[1][12]                               ; Merged with X[1][10]                   ;
-; X[1][13]                               ; Merged with X[1][10]                   ;
-; X[1][14]                               ; Merged with X[1][10]                   ;
-; X[1][15]                               ; Merged with X[1][10]                   ;
-; X[1][8]                                ; Merged with X[1][10]                   ;
-; X[1][9]                                ; Merged with X[1][10]                   ;
-; X[3][11]                               ; Merged with X[3][10]                   ;
-; X[3][12]                               ; Merged with X[3][10]                   ;
-; X[3][13]                               ; Merged with X[3][10]                   ;
-; X[3][8]                                ; Merged with X[3][10]                   ;
-; X[3][9]                                ; Merged with X[3][10]                   ;
-; X[0][10]                               ; Stuck at GND due to stuck port data_in ;
-; X[1][10]                               ; Stuck at GND due to stuck port data_in ;
-; X[2][10]                               ; Stuck at GND due to stuck port data_in ;
-; X[3][10]                               ; Stuck at GND due to stuck port data_in ;
-; data_out[12]~reg0                      ; Stuck at GND due to stuck port data_in ;
-; data_out[13]~reg0                      ; Stuck at GND due to stuck port data_in ;
-; data_out[14]~reg0                      ; Stuck at GND due to stuck port data_in ;
-; data_out[15]~reg0                      ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 36 ;                                        ;
-+----------------------------------------+----------------------------------------+
-
-
-+------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                        ;
-+---------------+---------------------------+----------------------------------------+
-; Register name ; Reason for Removal        ; Registers Removed due to This Register ;
-+---------------+---------------------------+----------------------------------------+
-; X[0][10]      ; Stuck at GND              ; X[1][10], X[2][10], X[3][10]           ;
-;               ; due to stuck port data_in ;                                        ;
-+---------------+---------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -277,12 +221,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 45    ;
-; Number of registers using Synchronous Clear  ; 10    ;
+; Total registers                              ; 5     ;
+; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 44    ;
+; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -292,7 +236,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 3:1                ; 44 bits   ; 88 LEs        ; 44 LEs               ; 44 LEs                 ; Yes        ; |FIR_4Tap|data_out[0]~reg0 ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |PowerManager|counter[3]   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -301,21 +245,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 28                          ;
-; cycloneiii_ff         ; 45                          ;
-;     ENA               ; 34                          ;
-;     ENA SCLR          ; 10                          ;
-;     plain             ; 1                           ;
-; cycloneiii_lcell_comb ; 76                          ;
-;     arith             ; 35                          ;
-;         2 data inputs ; 3                           ;
-;         3 data inputs ; 32                          ;
-;     normal            ; 41                          ;
-;         0 data inputs ; 5                           ;
-;         2 data inputs ; 36                          ;
+; boundary_port         ; 11                          ;
+; cycloneiii_ff         ; 5                           ;
+;     plain             ; 5                           ;
+; cycloneiii_lcell_comb ; 6                           ;
+;     normal            ; 6                           ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 2                           ;
+;         4 data inputs ; 3                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.62                        ;
+; Max LUT depth         ; 2.00                        ;
+; Average LUT depth     ; 1.62                        ;
 +-----------------------+-----------------------------+
 
 
@@ -334,33 +274,46 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri Jun 05 21:40:12 2026
+    Info: Processing started: Sun Jun 28 15:55:52 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FIFO_Toplvl -c FIFO_Toplvl
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file clk_gater_altclkctrl/synthesis/clk_gater_altclkctrl.v
+    Info (12023): Found entity 1: clk_gater_ALTCLKCTRL File: C:/intelFPGA_lite/20.1/VLSI/clk_gater_ALTCLKCTRL/synthesis/clk_gater_ALTCLKCTRL.v Line: 6
+Info (12021): Found 2 design units, including 2 entities, in source file clk_gater_altclkctrl/synthesis/submodules/clk_gater_altclkctrl_altclkctrl_0.v
+    Info (12023): Found entity 1: clk_gater_ALTCLKCTRL_altclkctrl_0_sub File: C:/intelFPGA_lite/20.1/VLSI/clk_gater_ALTCLKCTRL/synthesis/submodules/clk_gater_ALTCLKCTRL_altclkctrl_0.v Line: 29
+    Info (12023): Found entity 2: clk_gater_ALTCLKCTRL_altclkctrl_0 File: C:/intelFPGA_lite/20.1/VLSI/clk_gater_ALTCLKCTRL/synthesis/submodules/clk_gater_ALTCLKCTRL_altclkctrl_0.v Line: 90
 Info (12021): Found 1 design units, including 1 entities, in source file fir_4tap.v
     Info (12023): Found entity 1: FIR_4Tap File: C:/intelFPGA_lite/20.1/VLSI/FIR_4Tap.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file fir_4tap_tb.v
     Info (12023): Found entity 1: tb_FIR_4Tap File: C:/intelFPGA_lite/20.1/VLSI/FIR_4Tap_TB.v Line: 3
-Info (12127): Elaborating entity "FIR_4Tap" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at FIR_4Tap.v(30): truncated value with size 32 to match size of target (16) File: C:/intelFPGA_lite/20.1/VLSI/FIR_4Tap.v Line: 30
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "data_out[12]" is stuck at GND File: C:/intelFPGA_lite/20.1/VLSI/FIR_4Tap.v Line: 12
-    Warning (13410): Pin "data_out[13]" is stuck at GND File: C:/intelFPGA_lite/20.1/VLSI/FIR_4Tap.v Line: 12
-    Warning (13410): Pin "data_out[14]" is stuck at GND File: C:/intelFPGA_lite/20.1/VLSI/FIR_4Tap.v Line: 12
-    Warning (13410): Pin "data_out[15]" is stuck at GND File: C:/intelFPGA_lite/20.1/VLSI/FIR_4Tap.v Line: 12
+Info (12021): Found 1 design units, including 1 entities, in source file powermanager.v
+    Info (12023): Found entity 1: PowerManager File: C:/intelFPGA_lite/20.1/VLSI/PowerManager.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file powermanager_tb.v
+    Info (12023): Found entity 1: PowerManager_TB File: C:/intelFPGA_lite/20.1/VLSI/PowerManager_TB.v Line: 3
+Info (12127): Elaborating entity "PowerManager" for the top level hierarchy
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 2 registers lost all their fanouts during netlist optimizations.
+Warning (20013): Ignored 16 assignments for entity "clk_gater_ALTCLKCTRL" -- entity does not exist in design
+Warning (20013): Ignored 14 assignments for entity "clk_gater_ALTCLKCTRL_altclkctrl_0" -- entity does not exist in design
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 103 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 11 input pins
-    Info (21059): Implemented 17 output pins
-    Info (21061): Implemented 75 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4846 megabytes
-    Info: Processing ended: Fri Jun 05 21:40:44 2026
-    Info: Elapsed time: 00:00:32
-    Info: Total CPU time (on all processors): 00:00:29
+Warning (21074): Design contains 8 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "data_in[0]" File: C:/intelFPGA_lite/20.1/VLSI/PowerManager.v Line: 2
+    Warning (15610): No output dependent on input pin "data_in[1]" File: C:/intelFPGA_lite/20.1/VLSI/PowerManager.v Line: 2
+    Warning (15610): No output dependent on input pin "data_in[2]" File: C:/intelFPGA_lite/20.1/VLSI/PowerManager.v Line: 2
+    Warning (15610): No output dependent on input pin "data_in[3]" File: C:/intelFPGA_lite/20.1/VLSI/PowerManager.v Line: 2
+    Warning (15610): No output dependent on input pin "data_in[4]" File: C:/intelFPGA_lite/20.1/VLSI/PowerManager.v Line: 2
+    Warning (15610): No output dependent on input pin "data_in[5]" File: C:/intelFPGA_lite/20.1/VLSI/PowerManager.v Line: 2
+    Warning (15610): No output dependent on input pin "data_in[6]" File: C:/intelFPGA_lite/20.1/VLSI/PowerManager.v Line: 2
+    Warning (15610): No output dependent on input pin "data_in[7]" File: C:/intelFPGA_lite/20.1/VLSI/PowerManager.v Line: 2
+Info (21057): Implemented 18 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 10 input pins
+    Info (21059): Implemented 1 output pins
+    Info (21061): Implemented 7 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 4839 megabytes
+    Info: Processing ended: Sun Jun 28 15:56:03 2026
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:27
 
 

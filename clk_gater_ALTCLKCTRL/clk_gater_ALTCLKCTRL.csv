@@ -1,0 +1,18 @@
+# system info clk_gater_ALTCLKCTRL on 2026.06.28.15:17:44
+system_info:
+name,value
+DEVICE,EP4CE115F29C7
+DEVICE_FAMILY,Cyclone IV E
+GENERATION_ID,1782649062
+#
+#
+# Files generated for clk_gater_ALTCLKCTRL on 2026.06.28.15:17:44
+files:
+filepath,kind,attributes,module,is_top
+simulation/clk_gater_ALTCLKCTRL.v,VERILOG,,clk_gater_ALTCLKCTRL,true
+simulation/submodules/clk_gater_ALTCLKCTRL_altclkctrl_0.v,VERILOG,,clk_gater_ALTCLKCTRL_altclkctrl_0,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+clk_gater_ALTCLKCTRL.altclkctrl_0,clk_gater_ALTCLKCTRL_altclkctrl_0
