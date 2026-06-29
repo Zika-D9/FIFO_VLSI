@@ -4,75 +4,75 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "wr_addr[0]",
+					"name" : "rd_addr[0]",
 					"strict" : false
 				},
 				{
-					"name" : "wr_addr[1]",
+					"name" : "rd_addr[1]",
 					"strict" : false
 				},
 				{
-					"name" : "wr_addr[2]",
+					"name" : "rd_addr[2]",
 					"strict" : false
 				},
 				{
-					"name" : "wr_addr[3]",
+					"name" : "rd_addr[3]",
 					"strict" : false
 				},
 				{
-					"name" : "wr_ptr_gray[0]",
+					"name" : "rd_ptr_gray[0]",
 					"strict" : false
 				},
 				{
-					"name" : "wr_ptr_gray[1]",
+					"name" : "rd_ptr_gray[1]",
 					"strict" : false
 				},
 				{
-					"name" : "wr_ptr_gray[2]",
+					"name" : "rd_ptr_gray[2]",
 					"strict" : false
 				},
 				{
-					"name" : "wr_ptr_gray[3]",
+					"name" : "rd_ptr_gray[3]",
 					"strict" : false
 				},
 				{
-					"name" : "wr_ptr_gray[4]",
+					"name" : "rd_ptr_gray[4]",
 					"strict" : false
 				},
 				{
-					"name" : "wfull",
+					"name" : "rempty",
 					"strict" : false
 				},
 				{
-					"name" : "wr_en",
+					"name" : "rd_en",
 					"strict" : false
 				},
 				{
-					"name" : "wclk",
+					"name" : "rclk",
 					"strict" : false
 				},
 				{
-					"name" : "wrst_n",
+					"name" : "rrst_n",
 					"strict" : false
 				},
 				{
-					"name" : "rd_ptr_gray_sync[4]",
+					"name" : "wr_ptr_gray_sync[4]",
 					"strict" : false
 				},
 				{
-					"name" : "rd_ptr_gray_sync[3]",
+					"name" : "wr_ptr_gray_sync[3]",
 					"strict" : false
 				},
 				{
-					"name" : "rd_ptr_gray_sync[2]",
+					"name" : "wr_ptr_gray_sync[2]",
 					"strict" : false
 				},
 				{
-					"name" : "rd_ptr_gray_sync[0]",
+					"name" : "wr_ptr_gray_sync[0]",
 					"strict" : false
 				},
 				{
-					"name" : "rd_ptr_gray_sync[1]",
+					"name" : "wr_ptr_gray_sync[1]",
 					"strict" : false
 				}
 			]
