@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FIFO_Toplvl
-Sun Jun 28 19:32:00 2026
+Mon Jun 29 11:19:34 2026
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -14,7 +14,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: Top-level Entity: |TwoFF_Sync
+  9. Parameter Settings for User Entity Instance: Top-level Entity: |fifo_mem
  10. Post-Synthesis Netlist Statistics for Top Partition
  11. Elapsed Time Per Partition
  12. Analysis & Synthesis Messages
@@ -44,16 +44,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Jun 28 19:32:00 2026       ;
+; Analysis & Synthesis Status        ; Successful - Mon Jun 29 11:19:34 2026       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; FIFO_Toplvl                                 ;
-; Top-level Entity Name              ; TwoFF_Sync                                  ;
+; Top-level Entity Name              ; fifo_mem                                    ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 10                                          ;
-;     Total combinational functions  ; 0                                           ;
-;     Dedicated logic registers      ; 10                                          ;
-; Total registers                    ; 10                                          ;
-; Total pins                         ; 12                                          ;
+; Total logic elements               ; 896                                         ;
+;     Total combinational functions  ; 384                                         ;
+;     Dedicated logic registers      ; 512                                         ;
+; Total registers                    ; 512                                         ;
+; Total pins                         ; 45                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                            ; TwoFF_Sync         ; FIFO_Toplvl        ;
+; Top-level entity name                                            ; fifo_mem           ; FIFO_Toplvl        ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -156,53 +156,52 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 16          ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                           ;
-+----------------------------------+-----------------+------------------------+------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path             ; Library ;
-+----------------------------------+-----------------+------------------------+------------------------------------------+---------+
-; TwoFF_Sync.v                     ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/20.1/VLSI/TwoFF_Sync.v ;         ;
-+----------------------------------+-----------------+------------------------+------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                         ;
++----------------------------------+-----------------+------------------------+----------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path           ; Library ;
++----------------------------------+-----------------+------------------------+----------------------------------------+---------+
+; fifo_mem.v                       ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/20.1/VLSI/fifo_mem.v ;         ;
++----------------------------------+-----------------+------------------------+----------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 10        ;
-;                                             ;           ;
-; Total combinational functions               ; 0         ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 0         ;
-;     -- 3 input functions                    ; 0         ;
-;     -- <=2 input functions                  ; 0         ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 0         ;
-;     -- arithmetic mode                      ; 0         ;
-;                                             ;           ;
-; Total registers                             ; 10        ;
-;     -- Dedicated logic registers            ; 10        ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 12        ;
-;                                             ;           ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 10        ;
-; Total fan-out                               ; 47        ;
-; Average fan-out                             ; 1.38      ;
-+---------------------------------------------+-----------+
++----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary              ;
++---------------------------------------------+------------+
+; Resource                                    ; Usage      ;
++---------------------------------------------+------------+
+; Estimated Total logic elements              ; 896        ;
+;                                             ;            ;
+; Total combinational functions               ; 384        ;
+; Logic element usage by number of LUT inputs ;            ;
+;     -- 4 input functions                    ; 368        ;
+;     -- 3 input functions                    ; 16         ;
+;     -- <=2 input functions                  ; 0          ;
+;                                             ;            ;
+; Logic elements by mode                      ;            ;
+;     -- normal mode                          ; 384        ;
+;     -- arithmetic mode                      ; 0          ;
+;                                             ;            ;
+; Total registers                             ; 512        ;
+;     -- Dedicated logic registers            ; 512        ;
+;     -- I/O registers                        ; 0          ;
+;                                             ;            ;
+; I/O pins                                    ; 45         ;
+;                                             ;            ;
+; Embedded Multiplier 9-bit elements          ; 0          ;
+;                                             ;            ;
+; Maximum fan-out node                        ; wclk~input ;
+; Maximum fan-out                             ; 512        ;
+; Total fan-out                               ; 3117       ;
+; Average fan-out                             ; 3.16       ;
++---------------------------------------------+------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -210,7 +209,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |TwoFF_Sync                ; 0 (0)               ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 12   ; 0            ; |TwoFF_Sync         ; TwoFF_Sync  ; work         ;
+; |fifo_mem                  ; 384 (384)           ; 512 (512)                 ; 0           ; 0            ; 0       ; 0         ; 45   ; 0            ; |fifo_mem           ; fifo_mem    ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -220,38 +219,44 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 10    ;
+; Total registers                              ; 512   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 10    ;
+; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 512   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |TwoFF_Sync ;
-+----------------+-------+---------------------------------------------------+
-; Parameter Name ; Value ; Type                                              ;
-+----------------+-------+---------------------------------------------------+
-; WIDTH          ; 5     ; Signed Integer                                    ;
-+----------------+-------+---------------------------------------------------+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |fifo_mem ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; DATA_WIDTH     ; 16    ; Signed Integer                                  ;
+; DEPTH          ; 32    ; Signed Integer                                  ;
+; ADDR_WIDTH     ; 5     ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
-+-------------------+---------------------------------+
-; Type              ; Count                           ;
-+-------------------+---------------------------------+
-; boundary_port     ; 12                              ;
-; cycloneiii_ff     ; 10                              ;
-;     CLR           ; 10                              ;
-;                   ;                                 ;
-; Max LUT depth     ; 0.00                            ;
-; Average LUT depth ; 0.00                            ;
-+-------------------+---------------------------------+
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 45                          ;
+; cycloneiii_ff         ; 512                         ;
+;     ENA               ; 512                         ;
+; cycloneiii_lcell_comb ; 384                         ;
+;     normal            ; 384                         ;
+;         3 data inputs ; 16                          ;
+;         4 data inputs ; 368                         ;
+;                       ;                             ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 4.03                        ;
++-----------------------+-----------------------------+
 
 
 +-------------------------------+
@@ -269,7 +274,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun Jun 28 19:31:49 2026
+    Info: Processing started: Mon Jun 29 11:19:24 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FIFO_Toplvl -c FIFO_Toplvl
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -290,20 +295,26 @@ Info (12021): Found 1 design units, including 1 entities, in source file powerma
     Info (12023): Found entity 1: PowerManager_TB File: C:/intelFPGA_lite/20.1/VLSI/PowerManager_TB.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file twoff_sync_tb.v
     Info (12023): Found entity 1: TwoFF_Sync_TB File: C:/intelFPGA_lite/20.1/VLSI/TwoFF_Sync_TB.v Line: 3
-Info (12127): Elaborating entity "TwoFF_Sync" for the top level hierarchy
+Info (12021): Found 1 design units, including 1 entities, in source file fifo_mem.v
+    Info (12023): Found entity 1: fifo_mem File: C:/intelFPGA_lite/20.1/VLSI/fifo_mem.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file fifo_mem_tb.v
+    Info (12023): Found entity 1: fifo_mem_TB File: C:/intelFPGA_lite/20.1/VLSI/fifo_mem_TB.v Line: 3
+Info (12127): Elaborating entity "fifo_mem" for the top level hierarchy
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276007): RAM logic "mem" is uninferred due to asynchronous read logic File: C:/intelFPGA_lite/20.1/VLSI/fifo_mem.v Line: 15
 Info (286030): Timing-Driven Synthesis is running
 Warning (20013): Ignored 16 assignments for entity "clk_gater_ALTCLKCTRL" -- entity does not exist in design
 Warning (20013): Ignored 14 assignments for entity "clk_gater_ALTCLKCTRL_altclkctrl_0" -- entity does not exist in design
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 22 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 7 input pins
-    Info (21059): Implemented 5 output pins
-    Info (21061): Implemented 10 logic cells
+Info (21057): Implemented 941 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 29 input pins
+    Info (21059): Implemented 16 output pins
+    Info (21061): Implemented 896 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4838 megabytes
-    Info: Processing ended: Sun Jun 28 19:32:00 2026
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:28
+    Info: Peak virtual memory: 4781 megabytes
+    Info: Processing ended: Mon Jun 29 11:19:34 2026
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:27
 
 
