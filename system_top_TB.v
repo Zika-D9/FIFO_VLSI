@@ -3,8 +3,8 @@
 module system_top_TB;
 
     // Parameters for simulation acceleration
-    localparam UART_CLK_FREQ_TB  = 1000;
-    localparam UART_BAUD_RATE_TB = 100;
+    localparam UART_CLK_FREQ_TB  = 10_000_000;
+    localparam UART_BAUD_RATE_TB = 9600;
     localparam FIFO_DEPTH_TB     = 32;
 
     // Top interface signals declaration
@@ -25,7 +25,7 @@ module system_top_TB;
     integer    expected_count = 0;
     integer    read_count = 0;
     reg [15:0] reconstructed_data;
-
+	 
     // -----------------------------------------------------------------
     // Unit Under Test (UUT) Instantiation
     // -----------------------------------------------------------------
@@ -51,8 +51,8 @@ module system_top_TB;
     // Fast clock: 10ns period (100MHz)
     always #5 clk_fast_TB = ~clk_fast_TB;
     
-    // Slow clock: 26ns period (~38.4MHz) for realistic domain crossing
-    always #13 clk_slow_TB = ~clk_slow_TB;
+    // Slow clock: 50ns period (10MHz)
+    always #50 clk_slow_TB = ~clk_slow_TB;
 
     // -----------------------------------------------------------------
     // Main Test Stimulus
@@ -71,14 +71,23 @@ module system_top_TB;
 
         #100 rst_n_TB = 1; 
         #50;
-
-        // Inject 4 consecutive values into the FIR filter
-        @(posedge clk_fast_TB);
-        valid_in_TB = 1; data_in_TB = 8'd10; @(posedge clk_fast_TB);
-        valid_in_TB = 1; data_in_TB = 8'd20; @(posedge clk_fast_TB);
-        valid_in_TB = 1; data_in_TB = 8'd30; @(posedge clk_fast_TB);
-        valid_in_TB = 1; data_in_TB = 8'd40; @(posedge clk_fast_TB);
         
+		  valid_in_TB = 1;
+		  
+		  $display("\n");
+        $display("      FIRST ITERATION      ");
+        $display("=========================================================");
+		  
+        // Inject 4 consecutive values into the FIR filter
+        repeat (2) @(posedge clk_fast_TB); // Adding 2 clk for the ALTCLKCTRL delay
+        data_in_TB = 8'd10; @(posedge clk_fast_TB);
+        data_in_TB = 8'd10; @(posedge clk_fast_TB);
+        data_in_TB = 8'd10; @(posedge clk_fast_TB);
+        data_in_TB = 8'd10; @(posedge clk_fast_TB);
+		  data_in_TB = 8'd0; @(posedge clk_fast_TB);
+		  
+		  repeat (4) @(posedge clk_fast_TB);
+		  
         valid_in_TB = 0; // End of data injection
 
         // Wait until data reaches the FIFO read side
@@ -90,6 +99,47 @@ module system_top_TB;
         // Wait until UART finishes transmitting the last word
         wait (tx_busy_TB == 1'b0);
         
+		  //--------------------------------------------------------------------------------//
+		  
+        valid_in_TB = 1;
+			
+		  $display("\n");
+        $display("      SECOND ITERATION      ");
+        $display("=========================================================");
+			
+        // Inject 4 consecutive values into the FIR filter
+        repeat (2) @(posedge clk_fast_TB); // Adding 2 clk for the ALTCLKCTRL delay
+        data_in_TB = 8'd10; @(posedge clk_fast_TB);
+        data_in_TB = 8'd20; @(posedge clk_fast_TB);
+        data_in_TB = 8'd30; @(posedge clk_fast_TB);
+        data_in_TB = 8'd40; @(posedge clk_fast_TB);
+		  data_in_TB = 8'd0; @(posedge clk_fast_TB);
+		  
+        valid_in_TB = 0; // End of data injection
+		  
+		          // Wait until data reaches the FIFO read side
+        wait (rempty_TB == 1'b0); 
+        
+        // Wait until the FIFO is completely empty (everything sent to UART)
+        wait (rempty_TB == 1'b1);
+        
+        // Wait until UART finishes transmitting the last word
+        wait (tx_busy_TB == 1'b0);
+		  
+		  valid_in_TB = 1;
+		  @(posedge clk_fast_TB);
+		  valid_in_TB = 0;
+		  
+		  $display("\n=========================================================");
+        $display("                 POWER MANAGER TEST:                     ");
+        $display("=========================================================");
+		  
+		  repeat (2) @(posedge clk_fast_TB); // Adding 2 clk for the ALTCLKCTRL delay
+		  for (i=0 ; i<15; i=i+1) begin
+				$display(" Value of gated_clk_fast: %b", uut.fir_inst.gated_clk_fast);
+				@(posedge clk_fast_TB);
+		  end
+		  
         #500;
         $display("\n=========================================================");
         $display("                 SIMULATION COMPLETE                     ");
@@ -134,5 +184,10 @@ module system_top_TB;
             end
         end
     end
+
+	 initial begin
+    $dumpfile("simulation_dump.vcd"); // the file will be in the work dir
+    $dumpvars(0, system_top_TB);       
+	 end
 
 endmodule

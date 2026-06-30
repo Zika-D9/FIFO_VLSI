@@ -17,7 +17,7 @@ always @(posedge clk) begin
 	end
 	
 	if (counter >= 4'd10) begin
-		clk_en <= 1'b0 ;
+		clk_en <= 1'b0;
 	end else begin
 		clk_en <= 1'b1;
 	end

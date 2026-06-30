@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 dC:/intelFPGA_lite/20.1/VLSI/simulation/modelsim
 vclk_gater_ALTCLKCTRL_altclkctrl_0
-Z1 !s110 1782815310
+Z1 !s110 1782837070
 !i10b 1
 !s100 EE`P;0A8JGkJ;`7]fA9>K3
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -20,13 +20,13 @@ R0
 Z4 w1782649072
 Z5 8C:/intelFPGA_lite/20.1/VLSI/clk_gater_ALTCLKCTRL/synthesis/submodules/clk_gater_ALTCLKCTRL_altclkctrl_0.v
 Z6 FC:/intelFPGA_lite/20.1/VLSI/clk_gater_ALTCLKCTRL/synthesis/submodules/clk_gater_ALTCLKCTRL_altclkctrl_0.v
-!i122 2
+!i122 23
 L0 90 33
 Z7 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z8 !s108 1782815310.000000
+Z8 !s108 1782837070.000000
 !s107 C:/intelFPGA_lite/20.1/VLSI/clk_gater_ALTCLKCTRL/synthesis/submodules/clk_gater_ALTCLKCTRL_altclkctrl_0.v|
 Z9 !s90 -reportprogress|300|-vlog01compat|-work|clk_gater_ALTCLKCTRL|+incdir+C:/intelFPGA_lite/20.1/VLSI/clk_gater_ALTCLKCTRL/synthesis/submodules|C:/intelFPGA_lite/20.1/VLSI/clk_gater_ALTCLKCTRL/synthesis/submodules/clk_gater_ALTCLKCTRL_altclkctrl_0.v|
 !i113 1
@@ -45,7 +45,7 @@ R0
 R4
 R5
 R6
-!i122 2
+!i122 23
 L0 29 44
 R7
 r1

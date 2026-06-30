@@ -1,12 +1,12 @@
-Fitter Status : Successful - Tue Jun 30 13:28:03 2026
+Fitter Status : Successful - Tue Jun 30 18:32:13 2026
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : FIFO_Toplvl
 Top-level Entity Name : system_top
 Family : Cyclone IV E
 Device : EP4CE115F29C7
 Timing Models : Final
-Total logic elements : 198 / 114,480 ( < 1 % )
-    Total combinational functions : 166 / 114,480 ( < 1 % )
+Total logic elements : 197 / 114,480 ( < 1 % )
+    Total combinational functions : 167 / 114,480 ( < 1 % )
     Dedicated logic registers : 146 / 114,480 ( < 1 % )
 Total registers : 146
 Total pins : 16 / 529 ( 3 % )

@@ -1,0 +1,58 @@
+# ==========================================
+# Quartus Prime Project Files
+# ==========================================
+# Compilation database directories
+db/
+incremental_db/
+
+# Synthesis and mapping outputs
+output_files/
+*.rpt
+*.summary
+*.done
+*.smsg
+*.jdi
+*.pin
+*.sld
+*.qdf
+*.qws
+
+# Programming files (binaries)
+*.sof
+*.pof
+*.rbf
+*.jam
+*.jbc
+
+# ==========================================
+# Platform Designer (Qsys) Generated Files
+# ==========================================
+# Qsys editor temporary files
+.qsys_edit/
+
+# Auto-generated directories from the .qsys file
+# (Only the .qsys file itself should be version controlled)
+*/synthesis/
+*/simulation/
+*.bsf
+*.cmp
+*.html
+
+# ==========================================
+# ModelSim / QuestaSim Simulation Files
+# ==========================================
+# Simulation working library
+work/
+
+# Log files and simulation waveforms generated during runs
+transcript
+*.wlf
+*.vstf
+*.vcd
+modelsim.ini
+
+# ==========================================
+# OS Generated Files
+# ==========================================
+.DS_Store
+Thumbs.db
