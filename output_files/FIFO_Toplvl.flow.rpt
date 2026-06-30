@@ -1,21 +1,33 @@
 Flow report for FIFO_Toplvl
-Tue Jun 30 10:46:48 2026
+Tue Jun 30 13:28:16 2026
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
 ---------------------
 ; Table of Contents ;
 ---------------------
-  1. Legal Notice
-  2. Flow Summary
-  3. Flow Settings
-  4. Flow Non-Default Global Settings
-  5. Flow Elapsed Time
-  6. Flow OS Summary
-  7. Flow Log
-  8. Flow Messages
-  9. Flow Suppressed Messages
+  1. EDA Netlist Writer Summary
+  2. Legal Notice
+  3. Flow Summary
+  4. Flow Settings
+  5. Flow Non-Default Global Settings
+  6. Flow Elapsed Time
+  7. Flow OS Summary
+  8. Flow Log
+  9. Flow Messages
+ 10. Flow Suppressed Messages
 
+
+
++-------------------------------------------------------------------+
+; EDA Netlist Writer Summary                                        ;
++---------------------------+---------------------------------------+
+; EDA Netlist Writer Status ; Successful - Tue Jun 30 13:28:16 2026 ;
+; Revision Name             ; FIFO_Toplvl                           ;
+; Top-level Entity Name     ; system_top                            ;
+; Family                    ; Cyclone IV E                          ;
+; Simulation Files Creation ; Successful                            ;
++---------------------------+---------------------------------------+
 
 
 ----------------
@@ -41,20 +53,20 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Jun 30 10:46:44 2026       ;
+; Flow Status                        ; Successful - Tue Jun 30 13:28:16 2026       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; FIFO_Toplvl                                 ;
-; Top-level Entity Name              ; uart_top                                    ;
+; Top-level Entity Name              ; system_top                                  ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 56 / 114,480 ( < 1 % )                      ;
-;     Total combinational functions  ; 56 / 114,480 ( < 1 % )                      ;
-;     Dedicated logic registers      ; 39 / 114,480 ( < 1 % )                      ;
-; Total registers                    ; 39                                          ;
-; Total pins                         ; 22 / 529 ( 4 % )                            ;
+; Total logic elements               ; 198 / 114,480 ( < 1 % )                     ;
+;     Total combinational functions  ; 166 / 114,480 ( < 1 % )                     ;
+;     Dedicated logic registers      ; 146 / 114,480 ( < 1 % )                     ;
+; Total registers                    ; 146                                         ;
+; Total pins                         ; 16 / 529 ( 3 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                       ;
+; Total memory bits                  ; 384 / 3,981,312 ( < 1 % )                   ;
 ; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                             ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
 +------------------------------------+---------------------------------------------+
@@ -65,35 +77,39 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/30/2026 10:46:06 ;
+; Start date & time ; 06/30/2026 13:27:31 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; FIFO_Toplvl         ;
 +-------------------+---------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                                                 ;
-+-------------------------------------+------------------------------------------------------------------------+---------------+----------------------+------------+
-; Assignment Name                     ; Value                                                                  ; Default Value ; Entity Name          ; Section Id ;
-+-------------------------------------+------------------------------------------------------------------------+---------------+----------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 51249035334615.178280556602124                                         ; --            ; --                   ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                                                     ; --            ; --                   ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                                                      ; --            ; --                   ; --         ;
-; MISC_FILE                           ; clk_gater_ALTCLKCTRL/synthesis/../clk_gater_ALTCLKCTRL.cmp             ; --            ; --                   ; --         ;
-; MISC_FILE                           ; clk_gater_ALTCLKCTRL/synthesis/../../clk_gater_ALTCLKCTRL.qsys         ; --            ; --                   ; --         ;
-; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                                                   ; --            ; --                   ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family)                                 ; --            ; uart_top             ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                                 ; --            ; uart_top             ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                                 ; --            ; uart_top             ; Top        ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                                    ; --            ; --                   ; --         ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                                  ; --            ; --                   ; --         ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                           ; --            ; --                   ; --         ;
-; SLD_FILE                            ; clk_gater_ALTCLKCTRL/synthesis/clk_gater_ALTCLKCTRL.debuginfo          ; --            ; --                   ; --         ;
-; SLD_INFO                            ; QSYS_NAME clk_gater_ALTCLKCTRL HAS_SOPCINFO 1 GENERATION_ID 1782649071 ; --            ; clk_gater_ALTCLKCTRL ; --         ;
-; SOPCINFO_FILE                       ; clk_gater_ALTCLKCTRL/synthesis/../../clk_gater_ALTCLKCTRL.sopcinfo     ; --            ; --                   ; --         ;
-; SYNTHESIS_ONLY_QIP                  ; On                                                                     ; --            ; --                   ; --         ;
-; TOP_LEVEL_ENTITY                    ; uart_top                                                               ; FIFO_Toplvl   ; --                   ; --         ;
-+-------------------------------------+------------------------------------------------------------------------+---------------+----------------------+------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                            ;
++--------------------------------------------+------------------------------------------------------------------------+---------------+----------------------+----------------+
+; Assignment Name                            ; Value                                                                  ; Default Value ; Entity Name          ; Section Id     ;
++--------------------------------------------+------------------------------------------------------------------------+---------------+----------------------+----------------+
+; COMPILER_SIGNATURE_ID                      ; 51249035334615.178281525162540                                         ; --            ; --                   ; --             ;
+; EDA_GENERATE_RTL_SIMULATION_COMMAND_SCRIPT ; On                                                                     ; --            ; --                   ; eda_simulation ;
+; EDA_OUTPUT_DATA_FORMAT                     ; Verilog Hdl                                                            ; --            ; --                   ; eda_simulation ;
+; EDA_SIMULATION_TOOL                        ; ModelSim-Altera (Verilog)                                              ; <None>        ; --                   ; --             ;
+; EDA_TIME_SCALE                             ; 1 ps                                                                   ; --            ; --                   ; eda_simulation ;
+; MAX_CORE_JUNCTION_TEMP                     ; 85                                                                     ; --            ; --                   ; --             ;
+; MIN_CORE_JUNCTION_TEMP                     ; 0                                                                      ; --            ; --                   ; --             ;
+; MISC_FILE                                  ; clk_gater_ALTCLKCTRL/synthesis/../clk_gater_ALTCLKCTRL.cmp             ; --            ; --                   ; --             ;
+; MISC_FILE                                  ; clk_gater_ALTCLKCTRL/synthesis/../../clk_gater_ALTCLKCTRL.qsys         ; --            ; --                   ; --             ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE                ; 1.2V                                                                   ; --            ; --                   ; --             ;
+; PARTITION_COLOR                            ; -- (Not supported for targeted family)                                 ; --            ; system_top           ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL        ; -- (Not supported for targeted family)                                 ; --            ; system_top           ; Top            ;
+; PARTITION_NETLIST_TYPE                     ; -- (Not supported for targeted family)                                 ; --            ; system_top           ; Top            ;
+; POWER_BOARD_THERMAL_MODEL                  ; None (CONSERVATIVE)                                                    ; --            ; --                   ; --             ;
+; POWER_PRESET_COOLING_SOLUTION              ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                                  ; --            ; --                   ; --             ;
+; PROJECT_OUTPUT_DIRECTORY                   ; output_files                                                           ; --            ; --                   ; --             ;
+; SLD_FILE                                   ; clk_gater_ALTCLKCTRL/synthesis/clk_gater_ALTCLKCTRL.debuginfo          ; --            ; --                   ; --             ;
+; SLD_INFO                                   ; QSYS_NAME clk_gater_ALTCLKCTRL HAS_SOPCINFO 1 GENERATION_ID 1782649071 ; --            ; clk_gater_ALTCLKCTRL ; --             ;
+; SOPCINFO_FILE                              ; clk_gater_ALTCLKCTRL/synthesis/../../clk_gater_ALTCLKCTRL.sopcinfo     ; --            ; --                   ; --             ;
+; SYNTHESIS_ONLY_QIP                         ; On                                                                     ; --            ; --                   ; --             ;
+; TOP_LEVEL_ENTITY                           ; system_top                                                             ; FIFO_Toplvl   ; --                   ; --             ;
++--------------------------------------------+------------------------------------------------------------------------+---------------+----------------------+----------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -101,11 +117,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 4839 MB             ; 00:00:28                           ;
-; Fitter               ; 00:00:22     ; 1.0                     ; 6698 MB             ; 00:00:33                           ;
+; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 4846 MB             ; 00:00:27                           ;
+; Fitter               ; 00:00:20     ; 1.0                     ; 6713 MB             ; 00:00:34                           ;
 ; Assembler            ; 00:00:04     ; 1.0                     ; 4694 MB             ; 00:00:04                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.1                     ; 4991 MB             ; 00:00:02                           ;
-; Total                ; 00:00:38     ; --                      ; --                  ; 00:01:07                           ;
+; Timing Analyzer      ; 00:00:03     ; 1.1                     ; 4992 MB             ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4656 MB             ; 00:00:02                           ;
+; Total                ; 00:00:39     ; --                      ; --                  ; 00:01:09                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -118,6 +135,7 @@ https://fpgasoftware.intel.com/eula.
 ; Fitter               ; Zika_TUF_A14     ; Windows 10 ; 10.0       ; x86_64         ;
 ; Assembler            ; Zika_TUF_A14     ; Windows 10 ; 10.0       ; x86_64         ;
 ; Timing Analyzer      ; Zika_TUF_A14     ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Zika_TUF_A14     ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -128,6 +146,7 @@ quartus_map --read_settings_files=on --write_settings_files=off FIFO_Toplvl -c F
 quartus_fit --read_settings_files=off --write_settings_files=off FIFO_Toplvl -c FIFO_Toplvl
 quartus_asm --read_settings_files=off --write_settings_files=off FIFO_Toplvl -c FIFO_Toplvl
 quartus_sta FIFO_Toplvl -c FIFO_Toplvl
+quartus_eda --read_settings_files=off --write_settings_files=off FIFO_Toplvl -c FIFO_Toplvl
 
 
 

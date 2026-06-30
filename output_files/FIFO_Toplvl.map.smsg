@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at system_top_TB.v(115): always construct contains both blocking and non-blocking assignments File: C:/intelFPGA_lite/20.1/VLSI/system_top_TB.v Line: 115

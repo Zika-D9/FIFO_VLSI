@@ -1,0 +1,452 @@
+# Reading pref.tcl
+# do FIFO_Toplvl_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/20.1/VLSI {C:/intelFPGA_lite/20.1/VLSI/TwoFF_Sync.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:28:29 on Jun 30,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/20.1/VLSI" C:/intelFPGA_lite/20.1/VLSI/TwoFF_Sync.v 
+# -- Compiling module TwoFF_Sync
+# 
+# Top level modules:
+# 	TwoFF_Sync
+# End time: 13:28:29 on Jun 30,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/20.1/VLSI {C:/intelFPGA_lite/20.1/VLSI/FIR_4Tap.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:28:29 on Jun 30,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/20.1/VLSI" C:/intelFPGA_lite/20.1/VLSI/FIR_4Tap.v 
+# -- Compiling module FIR_4Tap
+# 
+# Top level modules:
+# 	FIR_4Tap
+# End time: 13:28:29 on Jun 30,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/20.1/VLSI {C:/intelFPGA_lite/20.1/VLSI/PowerManager.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:28:29 on Jun 30,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/20.1/VLSI" C:/intelFPGA_lite/20.1/VLSI/PowerManager.v 
+# -- Compiling module PowerManager
+# 
+# Top level modules:
+# 	PowerManager
+# End time: 13:28:29 on Jun 30,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/20.1/VLSI {C:/intelFPGA_lite/20.1/VLSI/fifo_mem.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:28:29 on Jun 30,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/20.1/VLSI" C:/intelFPGA_lite/20.1/VLSI/fifo_mem.v 
+# -- Compiling module fifo_mem
+# 
+# Top level modules:
+# 	fifo_mem
+# End time: 13:28:29 on Jun 30,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/20.1/VLSI {C:/intelFPGA_lite/20.1/VLSI/wr_domain.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:28:29 on Jun 30,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/20.1/VLSI" C:/intelFPGA_lite/20.1/VLSI/wr_domain.v 
+# -- Compiling module wr_domain
+# 
+# Top level modules:
+# 	wr_domain
+# End time: 13:28:29 on Jun 30,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/20.1/VLSI {C:/intelFPGA_lite/20.1/VLSI/rd_domain.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:28:29 on Jun 30,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/20.1/VLSI" C:/intelFPGA_lite/20.1/VLSI/rd_domain.v 
+# -- Compiling module rd_domain
+# 
+# Top level modules:
+# 	rd_domain
+# End time: 13:28:29 on Jun 30,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/20.1/VLSI {C:/intelFPGA_lite/20.1/VLSI/async_fifo_top.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:28:29 on Jun 30,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/20.1/VLSI" C:/intelFPGA_lite/20.1/VLSI/async_fifo_top.v 
+# -- Compiling module async_fifo_top
+# 
+# Top level modules:
+# 	async_fifo_top
+# End time: 13:28:29 on Jun 30,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/20.1/VLSI {C:/intelFPGA_lite/20.1/VLSI/baud_gen.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:28:29 on Jun 30,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/20.1/VLSI" C:/intelFPGA_lite/20.1/VLSI/baud_gen.v 
+# -- Compiling module baud_gen
+# 
+# Top level modules:
+# 	baud_gen
+# End time: 13:28:30 on Jun 30,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/20.1/VLSI {C:/intelFPGA_lite/20.1/VLSI/uart_tx_fsm.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:28:30 on Jun 30,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/20.1/VLSI" C:/intelFPGA_lite/20.1/VLSI/uart_tx_fsm.v 
+# -- Compiling module uart_tx_fsm
+# 
+# Top level modules:
+# 	uart_tx_fsm
+# End time: 13:28:30 on Jun 30,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/20.1/VLSI {C:/intelFPGA_lite/20.1/VLSI/uart_top.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:28:30 on Jun 30,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/20.1/VLSI" C:/intelFPGA_lite/20.1/VLSI/uart_top.v 
+# -- Compiling module uart_top
+# 
+# Top level modules:
+# 	uart_top
+# End time: 13:28:30 on Jun 30,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/20.1/VLSI {C:/intelFPGA_lite/20.1/VLSI/system_top.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:28:30 on Jun 30,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/20.1/VLSI" C:/intelFPGA_lite/20.1/VLSI/system_top.v 
+# -- Compiling module system_top
+# 
+# Top level modules:
+# 	system_top
+# End time: 13:28:30 on Jun 30,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlib clk_gater_ALTCLKCTRL
+# ** Warning: (vlib-34) Library already exists at "clk_gater_ALTCLKCTRL".
+# vmap clk_gater_ALTCLKCTRL clk_gater_ALTCLKCTRL
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap clk_gater_ALTCLKCTRL clk_gater_ALTCLKCTRL 
+# Modifying modelsim.ini
+# vlog -vlog01compat -work clk_gater_ALTCLKCTRL +incdir+C:/intelFPGA_lite/20.1/VLSI/clk_gater_ALTCLKCTRL/synthesis/submodules {C:/intelFPGA_lite/20.1/VLSI/clk_gater_ALTCLKCTRL/synthesis/submodules/clk_gater_ALTCLKCTRL_altclkctrl_0.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:28:30 on Jun 30,2026
+# vlog -reportprogress 300 -vlog01compat -work clk_gater_ALTCLKCTRL "+incdir+C:/intelFPGA_lite/20.1/VLSI/clk_gater_ALTCLKCTRL/synthesis/submodules" C:/intelFPGA_lite/20.1/VLSI/clk_gater_ALTCLKCTRL/synthesis/submodules/clk_gater_ALTCLKCTRL_altclkctrl_0.v 
+# -- Compiling module clk_gater_ALTCLKCTRL_altclkctrl_0_sub
+# -- Compiling module clk_gater_ALTCLKCTRL_altclkctrl_0
+# 
+# Top level modules:
+# 	clk_gater_ALTCLKCTRL_altclkctrl_0
+# End time: 13:28:30 on Jun 30,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# Load canceled
+vlog -reportprogress 300 -work work C:/intelFPGA_lite/20.1/VLSI/system_top_TB.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:29:34 on Jun 30,2026
+# vlog -reportprogress 300 -work work C:/intelFPGA_lite/20.1/VLSI/system_top_TB.v 
+# -- Compiling module system_top_TB
+# 
+# Top level modules:
+# 	system_top_TB
+# End time: 13:29:34 on Jun 30,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/intelFPGA_lite/20.1/VLSI/clk_gater_ALTCLKCTRL/simulation/clk_gater_ALTCLKCTRL.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:29:46 on Jun 30,2026
+# vlog -reportprogress 300 -work work C:/intelFPGA_lite/20.1/VLSI/clk_gater_ALTCLKCTRL/simulation/clk_gater_ALTCLKCTRL.v 
+# -- Compiling module clk_gater_ALTCLKCTRL
+# 
+# Top level modules:
+# 	clk_gater_ALTCLKCTRL
+# End time: 13:29:46 on Jun 30,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -gui -l msim_transcript work.system_top_TB
+# vsim -gui -l msim_transcript work.system_top_TB 
+# Start time: 13:30:02 on Jun 30,2026
+# Loading work.system_top_TB
+# Loading work.system_top
+# Loading work.PowerManager
+# ** Error: (vsim-3033) Instantiation of 'clk_gater_ALTCLKCTRL_altclkctrl_0' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /system_top_TB/uut File: C:/intelFPGA_lite/20.1/VLSI/system_top.v Line: 54
+#         Searched libraries:
+#             C:/intelFPGA_lite/20.1/VLSI/simulation/modelsim/rtl_work
+# Loading work.FIR_4Tap
+# Loading work.async_fifo_top
+# Loading work.fifo_mem
+# Loading work.wr_domain
+# Loading work.rd_domain
+# Loading work.TwoFF_Sync
+# Loading work.uart_top
+# Loading work.baud_gen
+# Loading work.uart_tx_fsm
+# Error loading design
+# End time: 13:30:02 on Jun 30,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vlib altera_mf
+vmap altera_mf altera_mf
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap altera_mf altera_mf 
+# Modifying modelsim.ini
+vlog -work altera_mf "C:/intelFPGA/20.1/quartus/eda/sim_lib/altera_mf.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:30:43 on Jun 30,2026
+# vlog -reportprogress 300 -work altera_mf C:/intelFPGA/20.1/quartus/eda/sim_lib/altera_mf.v 
+# ** Error: (vlog-7) Failed to open design unit file "C:/intelFPGA/20.1/quartus/eda/sim_lib/altera_mf.v" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 13:30:43 on Jun 30,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+vlib altera_mf
+# ** Warning: (vlib-34) Library already exists at "altera_mf".
+vmap altera_mf altera_mf
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap altera_mf altera_mf 
+# Modifying modelsim.ini
+vlog -work altera_mf "C:\intelFPGA_lite\20.1\quartus\eda\sim_lib\altera_mf.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:38:27 on Jun 30,2026
+# vlog -reportprogress 300 -work altera_mf C:intelFPGA_lite.1quartusedasim_libltera_mf.v 
+# ** Error: (vlog-7) Failed to open design unit file "C:intelFPGA_lite.1quartusedasim_libltera_mf.v" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 13:38:27 on Jun 30,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+vlib altera_mf
+# ** Warning: (vlib-34) Library already exists at "altera_mf".
+vmap altera_mf altera_mf
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap altera_mf altera_mf 
+# Modifying modelsim.ini
+vlog -work altera_mf {C:\intelFPGA_lite\20.1\quartus\eda\sim_lib\altera_mf.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:43:04 on Jun 30,2026
+# vlog -reportprogress 300 -work altera_mf C:\intelFPGA_lite\20.1\quartus\eda\sim_lib\altera_mf.v 
+# -- Compiling module lcell
+# -- Compiling module ALTERA_MF_MEMORY_INITIALIZATION
+# -- Compiling module ALTERA_MF_HINT_EVALUATION
+# -- Compiling module ALTERA_DEVICE_FAMILIES
+# -- Compiling module dffp
+# -- Compiling module pll_iobuf
+# -- Compiling module stx_m_cntr
+# -- Compiling module stx_n_cntr
+# -- Compiling module stx_scale_cntr
+# -- Compiling module MF_pll_reg
+# -- Compiling module MF_stratix_pll
+# -- Compiling module arm_m_cntr
+# -- Compiling module arm_n_cntr
+# -- Compiling module arm_scale_cntr
+# -- Compiling module MF_stratixii_pll
+# -- Compiling module ttn_m_cntr
+# -- Compiling module ttn_n_cntr
+# -- Compiling module ttn_scale_cntr
+# -- Compiling module MF_stratixiii_pll
+# -- Compiling module cda_m_cntr
+# -- Compiling module cda_n_cntr
+# -- Compiling module cda_scale_cntr
+# -- Compiling module MF_cycloneiii_pll
+# -- Compiling module MF_cycloneiiigl_m_cntr
+# -- Compiling module MF_cycloneiiigl_n_cntr
+# -- Compiling module MF_cycloneiiigl_scale_cntr
+# -- Compiling module cycloneiiigl_post_divider
+# -- Compiling module MF_cycloneiiigl_pll
+# -- Compiling module altpll
+# -- Compiling module altlvds_rx
+# -- Compiling module stratix_lvds_rx
+# -- Compiling module stratixgx_dpa_lvds_rx
+# -- Compiling module stratixii_lvds_rx
+# -- Compiling module flexible_lvds_rx
+# -- Compiling module stratixiii_lvds_rx
+# -- Compiling module stratixiii_lvds_rx_channel
+# -- Compiling module stratixiii_lvds_rx_dpa
+# -- Compiling module altlvds_tx
+# -- Compiling module stratixv_local_clk_divider
+# -- Compiling module stratix_tx_outclk
+# -- Compiling module stratixii_tx_outclk
+# -- Compiling module flexible_lvds_tx
+# -- Compiling module dcfifo_dffpipe
+# -- Compiling module dcfifo_fefifo
+# -- Compiling module dcfifo_async
+# -- Compiling module dcfifo_sync
+# -- Compiling module dcfifo_low_latency
+# -- Compiling module dcfifo_mixed_widths
+# -- Compiling module dcfifo
+# -- Compiling module altera_syncram_derived
+# -- Compiling module altera_syncram_derived_forwarding_logic
+# -- Compiling module altaccumulate
+# -- Compiling module altmult_accum
+# -- Compiling module altmult_add
+# -- Compiling module altfp_mult
+# -- Compiling module altsqrt
+# -- Compiling module altclklock
+# -- Compiling module altddio_in
+# -- Compiling module altddio_out
+# -- Compiling module altddio_bidir
+# -- Compiling module altdpram
+# -- Compiling module altsyncram
+# -- Compiling module altsyncram_body
+# -- Compiling module alt3pram
+# -- Compiling module parallel_add
+# -- Compiling module scfifo
+# -- Compiling module altshift_taps
+# -- Compiling module a_graycounter
+# -- Compiling module altsquare
+# -- Compiling module altera_std_synchronizer
+# -- Compiling module altera_std_synchronizer_bundle
+# -- Compiling module alt_cal
+# -- Compiling module alt_cal_mm
+# -- Compiling module alt_cal_c3gxb
+# -- Compiling module alt_cal_sv
+# -- Compiling module alt_cal_av
+# -- Compiling module alt_aeq_s4
+# -- Compiling module alt_eyemon
+# -- Compiling module alt_dfe
+# -- Compiling module signal_gen
+# -- Compiling module jtag_tap_controller
+# -- Compiling module dummy_hub
+# -- Compiling module sld_virtual_jtag
+# -- Compiling module sld_signaltap
+# -- Compiling module altstratixii_oct
+# -- Compiling module altparallel_flash_loader
+# -- Compiling module altserial_flash_loader
+# -- Compiling module alt_fault_injection
+# -- Compiling module sld_virtual_jtag_basic
+# -- Compiling module altsource_probe
+# 
+# Top level modules:
+# 	lcell
+# 	altpll
+# 	altlvds_rx
+# 	altlvds_tx
+# 	dcfifo
+# 	altaccumulate
+# 	altmult_accum
+# 	altmult_add
+# 	altfp_mult
+# 	altsqrt
+# 	altclklock
+# 	altddio_bidir
+# 	altdpram
+# 	alt3pram
+# 	parallel_add
+# 	scfifo
+# 	altshift_taps
+# 	a_graycounter
+# 	altsquare
+# 	altera_std_synchronizer_bundle
+# 	alt_cal
+# 	alt_cal_mm
+# 	alt_cal_c3gxb
+# 	alt_cal_sv
+# 	alt_cal_av
+# 	alt_aeq_s4
+# 	alt_eyemon
+# 	alt_dfe
+# 	sld_virtual_jtag
+# 	sld_signaltap
+# 	altstratixii_oct
+# 	altparallel_flash_loader
+# 	altserial_flash_loader
+# 	alt_fault_injection
+# 	sld_virtual_jtag_basic
+# 	altsource_probe
+# End time: 13:43:05 on Jun 30,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vsim -L altera_mf work.tb_top_level
+# vsim -L altera_mf work.tb_top_level 
+# Start time: 13:43:46 on Jun 30,2026
+# ** Error: (vsim-3170) Could not find 'tb_top_level'.
+#         Searched libraries:
+#             C:/intelFPGA_lite/20.1/VLSI/simulation/modelsim/altera_mf
+#             C:/intelFPGA_lite/20.1/VLSI/simulation/modelsim/rtl_work
+# Error loading design
+# End time: 13:43:46 on Jun 30,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vsim -L altera_mf work.system_top_TB.v
+# vsim -L altera_mf work.system_top_TB.v 
+# Start time: 13:45:06 on Jun 30,2026
+# ** Error (suppressible): (vsim-19) Failed to access library 'work.system_top_TB' at "work.system_top_TB".
+# No such file or directory. (errno = ENOENT)
+# Error loading design
+# End time: 13:45:06 on Jun 30,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vsim -L altera_mf work.system_top_TB
+# vsim -L altera_mf work.system_top_TB 
+# Start time: 13:46:01 on Jun 30,2026
+# Loading work.system_top_TB
+# Loading work.system_top
+# Loading work.PowerManager
+# ** Error: (vsim-3033) Instantiation of 'clk_gater_ALTCLKCTRL_altclkctrl_0' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /system_top_TB/uut File: C:/intelFPGA_lite/20.1/VLSI/system_top.v Line: 54
+#         Searched libraries:
+#             C:/intelFPGA_lite/20.1/VLSI/simulation/modelsim/altera_mf
+#             C:/intelFPGA_lite/20.1/VLSI/simulation/modelsim/rtl_work
+# Loading work.FIR_4Tap
+# Loading work.async_fifo_top
+# Loading work.fifo_mem
+# Loading work.wr_domain
+# Loading work.rd_domain
+# Loading work.TwoFF_Sync
+# Loading work.uart_top
+# Loading work.baud_gen
+# Loading work.uart_tx_fsm
+# Error loading design
+# End time: 13:46:01 on Jun 30,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# 1. Compile the main IP submodule file hidden inside the synthesis directory
+vlog -work work {C:\intelFPGA_lite\20.1\VLSI\clk_gater_ALTCLKCTRL\synthesis\submodules\clk_gater_ALTCLKCTRL_altclkctrl_0.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:50:37 on Jun 30,2026
+# vlog -reportprogress 300 -work work C:\intelFPGA_lite\20.1\VLSI\clk_gater_ALTCLKCTRL\synthesis\submodules\clk_gater_ALTCLKCTRL_altclkctrl_0.v 
+# -- Compiling module clk_gater_ALTCLKCTRL_altclkctrl_0_sub
+# -- Compiling module clk_gater_ALTCLKCTRL_altclkctrl_0
+# 
+# Top level modules:
+# 	clk_gater_ALTCLKCTRL_altclkctrl_0
+# End time: 13:50:37 on Jun 30,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+
+# 2. Compile your top-level project files and testbench (run from your project directory)
+vlog -work work system_top.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:50:37 on Jun 30,2026
+# vlog -reportprogress 300 -work work system_top.v 
+# ** Error: (vlog-7) Failed to open design unit file "system_top.v" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 13:50:38 on Jun 30,2026, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+vlog -work work system_top_TB.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:50:38 on Jun 30,2026
+# vlog -reportprogress 300 -work work system_top_TB.v 
+# ** Error: (vlog-7) Failed to open design unit file "system_top_TB.v" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 13:50:38 on Jun 30,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+
+# 3. Start the simulation, binding the work library and the altera_mf hardware primitives
+vsim -L altera_mf work.system_top_TB
+# vsim -L altera_mf work.system_top_TB 
+# Start time: 13:50:38 on Jun 30,2026
+# Loading work.system_top_TB
+# Loading work.system_top
+# Loading work.PowerManager
+# Loading work.clk_gater_ALTCLKCTRL_altclkctrl_0
+# Loading work.clk_gater_ALTCLKCTRL_altclkctrl_0_sub
+# ** Error: (vsim-3033) Instantiation of 'cycloneive_clkctrl' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /system_top_TB/uut/clk_gater_inst/clk_gater_ALTCLKCTRL_altclkctrl_0_sub_component File: C:/intelFPGA_lite/20.1/VLSI/clk_gater_ALTCLKCTRL/synthesis/submodules/clk_gater_ALTCLKCTRL_altclkctrl_0.v Line: 51
+#         Searched libraries:
+#             C:/intelFPGA_lite/20.1/VLSI/simulation/modelsim/altera_mf
+#             C:/intelFPGA_lite/20.1/VLSI/simulation/modelsim/rtl_work
+# Loading work.FIR_4Tap
+# Loading work.async_fifo_top
+# Loading work.fifo_mem
+# Loading work.wr_domain
+# Loading work.rd_domain
+# Loading work.TwoFF_Sync
+# Loading work.uart_top
+# Loading work.baud_gen
+# Loading work.uart_tx_fsm
+# Error loading design
+# End time: 13:50:39 on Jun 30,2026, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
