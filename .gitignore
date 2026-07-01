@@ -5,6 +5,12 @@
 db/
 incremental_db/
 
+# Quartus backup files
+*.bak
+
+# Root simulation directory (NativeLink)
+simulation/
+
 # Synthesis and mapping outputs
 output_files/
 *.rpt

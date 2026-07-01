@@ -35,6 +35,7 @@ module system_top #(
     wire        fifo_rinc;
 	 
 	 assign rempty = fifo_empty;
+  //  assign gated_clk_fast = clk_fast;
 
     // =================================================================
     // 1. Power Manager (Generates Clock Enable)
